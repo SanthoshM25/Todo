@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat Alternates;
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  background-color: #a7bbc7;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin: 2em 2em 1em 2em;
+}
+
+#task-inp {
+  width: 15em;
+  position: relative;
+  background-color: #dbe5e7;
+  color: black;
+  border: 0;
+  border-radius: 10px;
+  font-size: 1.5em;
+  padding: 0.2em;
+  margin-bottom: 2em;
+}
+
+#task-inp:hover {
+  background-color: #fff;
+}
+
+#btn-add {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  padding: 0.3em 0.5em 0.5em 0.5em;
+  bottom: -0.2em;
+  top: 8.8em;
+  margin-left: 0.8em;
+  background-color: #dbe5e7;
+  color: #626568;
+  font-weight: bold;
+  font-size: medium;
+  border: 0;
+  border-radius: 10px;
+}
+
+#btn-add:hover {
+  background-color: #fff;
+}
+.done {
+  text-decoration: line-through;
+  background-color: #a7bbc7;
+  border: none;
+}
+
+li {
+  height: 2em;
+  width: 300px;
+  background-color: #1111;
+  cursor: pointer;
+  list-style: none;
+  padding: 15px 25px 5px 25px;
+  color: #111;
+  text-transform: capitalize;
+  font-weight: 600;
+  border-bottom: 2px solid #025f70;
+  margin-left: 1em;
+  margin-bottom: 10px;
+  background: transparent;
+  transition: all 0.3s ease-out;
+}
+
+li:hover {
+  background-color: transparent;
+  border: 2px solid #025f70;
+  border-radius: 5px;
+}
+
+li .edit-btn {
+  background: url("./images/edit-icon.png") no-repeat;
+  height: 30px;
+  width: 20px;
+  background-size: 80%;
+  border: none;
+  float: right;
+  cursor: pointer;
+}
+
+li .del-btn {
+  background: url("./images/cancel-btn.png") no-repeat;
+  height: 30px;
+  width: 18px;
+  margin-left: 10px;
+  background-size: 80%;
+  border: none;
+  float: right;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  * {
+    overflow: scroll;
+  }
+  #task-inp {
+    width: 10em;
+  }
+  li {
+    width: 200px;
+  }
+}
